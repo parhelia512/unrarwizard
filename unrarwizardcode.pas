@@ -1,11 +1,16 @@
 unit unrarwizardcode;
 
-{$mode objfpc}{$H+}
+{
+ This software was made by Popov Evgeniy Alekseyevich.
+ It is distributed under the GNU GENERAL PUBLIC LICENSE (Version 2 or higher).
+}
+
+{$mode objfpc}
+{$H+}
 
 interface
 
-uses
-Classes, SysUtils, Forms, Controls, Dialogs, ExtCtrls, StdCtrls;
+uses Classes, SysUtils, Forms, Controls, Dialogs, ExtCtrls, StdCtrls;
 
 type
 
@@ -26,7 +31,11 @@ type
     procedure FormCreate(Sender: TObject);
     procedure ArchiveFieldChange(Sender: TObject);
   private
-    { private declarations }
+    procedure window_setup();
+    procedure dialog_setup();
+    procedure interface_setup();
+    procedure language_setup();
+    procedure setup();
   public
     { public declarations }
   end; 
@@ -76,92 +85,92 @@ begin
  execute_program(target,work+convert_file_name(archive)+' '+convert_file_name(directory));
 end;
 
-procedure window_setup();
+procedure TMainWindow.window_setup();
 begin
  Application.Title:='Unrar wizard';
- MainWindow.Caption:='Unrar wizard 1.2.9';
- MainWindow.BorderStyle:=bsDialog;
- MainWindow.Font.Name:=Screen.MenuFont.Name;
- MainWindow.Font.Size:=14;
+ Self.Caption:='Unrar wizard 1.3';
+ Self.BorderStyle:=bsDialog;
+ Self.Font.Name:=Screen.MenuFont.Name;
+ Self.Font.Size:=14;
 end;
 
-procedure dialog_setup();
+procedure TMainWindow.dialog_setup();
 begin
- MainWindow.SelectDirectoryDialog.InitialDir:='';
- MainWindow.OpenDialog.InitialDir:='';
- MainWindow.OpenDialog.FileName:='*.rar';
- MainWindow.OpenDialog.DefaultExt:='*.rar';
- MainWindow.OpenDialog.Filter:='Rar archive|*.rar';
+ Self.SelectDirectoryDialog.InitialDir:='';
+ Self.OpenDialog.InitialDir:='';
+ Self.OpenDialog.FileName:='*.rar';
+ Self.OpenDialog.DefaultExt:='*.rar';
+ Self.OpenDialog.Filter:='Rar archive|*.rar';
 end;
 
-procedure interface_setup();
+procedure TMainWindow.interface_setup();
 begin
- MainWindow.OpenButton.ShowHint:=False;
- MainWindow.BrowseButton.ShowHint:=False;
- MainWindow.BrowseButton.ShowHint:=False;
- MainWindow.ExtractButton.Enabled:=False;
- MainWindow.OverwriteCheckBox.Checked:=True;
- MainWindow.ArchiveField.LabelPosition:=lpLeft;
- MainWindow.DirectoryField.LabelPosition:=lpLeft;
- MainWindow.ArchiveField.Enabled:=False;
- MainWindow.DirectoryField.Enabled:=False;
- MainWindow.ArchiveField.Text:='';
- MainWindow.DirectoryField.Text:='';
+ Self.OpenButton.ShowHint:=False;
+ Self.BrowseButton.ShowHint:=False;
+ Self.BrowseButton.ShowHint:=False;
+ Self.ExtractButton.Enabled:=False;
+ Self.OverwriteCheckBox.Checked:=True;
+ Self.ArchiveField.LabelPosition:=lpLeft;
+ Self.DirectoryField.LabelPosition:=lpLeft;
+ Self.ArchiveField.Enabled:=False;
+ Self.DirectoryField.Enabled:=False;
+ Self.ArchiveField.Text:='';
+ Self.DirectoryField.Text:='';
 end;
 
-procedure language_setup();
+procedure TMainWindow.language_setup();
 begin
- MainWindow.ArchiveField.EditLabel.Caption:='Archive';
- MainWindow.OverwriteCheckBox.Caption:='Overwrite the existing files';
- MainWindow.OpenButton.Caption:='Open';
- MainWindow.BrowseButton.Caption:='Browse';
- MainWindow.ExtractButton.Caption:='Extract';
- MainWindow.OpenDialog.Title:='Open the existing archive';
- MainWindow.SelectDirectoryDialog.Title:='Please select the output directory';
+ Self.ArchiveField.EditLabel.Caption:='Archive';
+ Self.OverwriteCheckBox.Caption:='Overwrite the existing files';
+ Self.OpenButton.Caption:='Open';
+ Self.BrowseButton.Caption:='Browse';
+ Self.ExtractButton.Caption:='Extract';
+ Self.OpenDialog.Title:='Open the existing archive';
+ Self.SelectDirectoryDialog.Title:='Please select the output directory';
 end;
 
-procedure setup();
+procedure TMainWindow.setup();
 begin
- window_setup();
- dialog_setup();
- interface_setup();
- language_setup();
+ Self.window_setup();
+ Self.dialog_setup();
+ Self.interface_setup();
+ Self.language_setup();
 end;
 
 { TMainWindow }
 
 procedure TMainWindow.FormCreate(Sender: TObject);
 begin
- setup();
+ Self.setup();
 end;
 
 procedure TMainWindow.ArchiveFieldChange(Sender: TObject);
 begin
- MainWindow.ExtractButton.Enabled:=MainWindow.ArchiveField.Text<>'';
+ Self.ExtractButton.Enabled:=Self.ArchiveField.Text<>'';
 end;
 
 procedure TMainWindow.OpenButtonClick(Sender: TObject);
 begin
- if MainWindow.OpenDialog.Execute()=True then
+ if Self.OpenDialog.Execute()=True then
  begin
-  MainWindow.ArchiveField.Text:=MainWindow.OpenDialog.FileName;
-  MainWindow.DirectoryField.Text:=ExtractFilePath(MainWindow.OpenDialog.FileName);
+  Self.ArchiveField.Text:=Self.OpenDialog.FileName;
+  Self.DirectoryField.Text:=ExtractFilePath(Self.OpenDialog.FileName);
  end;
 
 end;
 
 procedure TMainWindow.BrowseButtonClick(Sender: TObject);
 begin
- if MainWindow.SelectDirectoryDialog.Execute()=True then
+ if Self.SelectDirectoryDialog.Execute()=True then
  begin
-  MainWindow.DirectoryField.Text:=correct_path(MainWindow.SelectDirectoryDialog.FileName);
+  Self.DirectoryField.Text:=correct_path(Self.SelectDirectoryDialog.FileName);
  end;
 
 end;
 
 procedure TMainWindow.ExtractButtonClick(Sender: TObject);
 begin
- extract_data(MainWindow.ArchiveField.Text,MainWindow.DirectoryField.Text,MainWindow.OverwriteCheckBox.Checked);
+ extract_data(Self.ArchiveField.Text,Self.DirectoryField.Text,Self.OverwriteCheckBox.Checked);
 end;
 
 {$R *.lfm}

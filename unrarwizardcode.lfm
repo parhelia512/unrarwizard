@@ -6,7 +6,7 @@ object MainWindow: TMainWindow
   Caption = 'Unrar wizard'
   ClientHeight = 170
   ClientWidth = 451
-  LCLVersion = '4.2.0.0'
+  LCLVersion = '4.8.0.0'
   OnCreate = FormCreate
   object ArchiveField: TLabeledEdit
     Left = 80

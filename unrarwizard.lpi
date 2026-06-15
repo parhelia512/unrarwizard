@@ -14,7 +14,7 @@
     <i18n>
       <EnableI18N LFM="False"/>
     </i18n>
-    <BuildModes Count="2" Active="Windows 32 bit">
+    <BuildModes Count="2" Active="Windows 64 bit">
       <Item1 Name="Windows 32 bit" Default="True"/>
       <Item2 Name="Windows 64 bit">
         <CompilerOptions>
@@ -38,6 +38,7 @@
           <Linking>
             <Debugging>
               <GenerateDebugInfo Value="False"/>
+              <RunWithoutDebug Value="True"/>
               <UseLineInfoUnit Value="False"/>
             </Debugging>
             <LinkSmart Value="True"/>
@@ -78,8 +79,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="70"/>
-        <CursorPos X="41" Y="82"/>
+        <TopLine Value="118"/>
+        <CursorPos X="23" Y="132"/>
         <UsageCount Value="23"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -88,123 +89,123 @@
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="unrarwizardcode.pas"/>
-        <Caret Line="148" Column="61" TopLine="148"/>
+        <Caret Line="176" Column="48" TopLine="49"/>
       </Position1>
       <Position2>
         <Filename Value="unrarwizardcode.pas"/>
-        <Caret Line="164" TopLine="156"/>
+        <Caret Line="180" Column="6" TopLine="170"/>
       </Position2>
       <Position3>
         <Filename Value="unrarwizardcode.pas"/>
-        <Caret Line="155" TopLine="140"/>
+        <Caret Line="181" Column="17" TopLine="168"/>
       </Position3>
       <Position4>
         <Filename Value="unrarwizardcode.pas"/>
-        <Caret Line="176" Column="5" TopLine="161"/>
+        <Caret Line="26" Column="51" TopLine="17"/>
       </Position4>
       <Position5>
         <Filename Value="unrarwizardcode.pas"/>
-        <Caret Line="170" TopLine="161"/>
+        <Caret Line="165" Column="31" TopLine="156"/>
       </Position5>
       <Position6>
         <Filename Value="unrarwizardcode.pas"/>
-        <Caret Line="176" Column="48" TopLine="49"/>
+        <Caret Line="120" Column="48" TopLine="94"/>
       </Position6>
       <Position7>
         <Filename Value="unrarwizardcode.pas"/>
-        <Caret Line="180" Column="6" TopLine="170"/>
+        <Caret Line="140" Column="51" TopLine="70"/>
       </Position7>
       <Position8>
         <Filename Value="unrarwizardcode.pas"/>
-        <Caret Line="181" Column="17" TopLine="168"/>
+        <Caret Line="159" Column="70" TopLine="154"/>
       </Position8>
       <Position9>
         <Filename Value="unrarwizardcode.pas"/>
-        <Caret Line="26" Column="51" TopLine="17"/>
+        <Caret Line="175" Column="116" TopLine="166"/>
       </Position9>
       <Position10>
         <Filename Value="unrarwizardcode.pas"/>
-        <Caret Line="165" Column="31" TopLine="156"/>
+        <Caret Line="82" Column="41" TopLine="69"/>
       </Position10>
       <Position11>
         <Filename Value="unrarwizardcode.pas"/>
-        <Caret Line="120" Column="48" TopLine="94"/>
+        <Caret Line="104" Column="13" TopLine="97"/>
       </Position11>
       <Position12>
         <Filename Value="unrarwizardcode.pas"/>
-        <Caret Line="140" Column="51" TopLine="70"/>
+        <Caret Line="164" Column="26" TopLine="152"/>
       </Position12>
       <Position13>
         <Filename Value="unrarwizardcode.pas"/>
-        <Caret Line="159" Column="70" TopLine="154"/>
+        <Caret Line="105" Column="13" TopLine="99"/>
       </Position13>
       <Position14>
         <Filename Value="unrarwizardcode.pas"/>
-        <Caret Line="175" Column="116" TopLine="166"/>
+        <Caret Line="164" Column="55" TopLine="152"/>
       </Position14>
       <Position15>
         <Filename Value="unrarwizardcode.pas"/>
-        <Caret Line="82" Column="41" TopLine="69"/>
+        <Caret Line="99" Column="13" TopLine="92"/>
       </Position15>
       <Position16>
         <Filename Value="unrarwizardcode.pas"/>
-        <Caret Line="104" Column="13" TopLine="97"/>
+        <Caret Line="116" Column="13" TopLine="104"/>
       </Position16>
       <Position17>
         <Filename Value="unrarwizardcode.pas"/>
-        <Caret Line="164" Column="26" TopLine="152"/>
+        <Caret Line="100" Column="13" TopLine="93"/>
       </Position17>
       <Position18>
         <Filename Value="unrarwizardcode.pas"/>
-        <Caret Line="105" Column="13" TopLine="99"/>
+        <Caret Line="117" Column="13" TopLine="105"/>
       </Position18>
       <Position19>
         <Filename Value="unrarwizardcode.pas"/>
-        <Caret Line="164" Column="55" TopLine="152"/>
+        <Caret Line="102" Column="13" TopLine="95"/>
       </Position19>
       <Position20>
         <Filename Value="unrarwizardcode.pas"/>
-        <Caret Line="99" Column="13" TopLine="92"/>
+        <Caret Line="140" Column="13" TopLine="128"/>
       </Position20>
       <Position21>
         <Filename Value="unrarwizardcode.pas"/>
-        <Caret Line="116" Column="13" TopLine="104"/>
+        <Caret Line="103" Column="13" TopLine="96"/>
       </Position21>
       <Position22>
         <Filename Value="unrarwizardcode.pas"/>
-        <Caret Line="100" Column="13" TopLine="93"/>
+        <Caret Line="164" Column="86" TopLine="152"/>
       </Position22>
       <Position23>
         <Filename Value="unrarwizardcode.pas"/>
-        <Caret Line="117" Column="13" TopLine="105"/>
+        <Caret Line="91" Column="13" TopLine="84"/>
       </Position23>
       <Position24>
         <Filename Value="unrarwizardcode.pas"/>
-        <Caret Line="102" Column="13" TopLine="95"/>
+        <Caret Line="148" Column="62" TopLine="136"/>
       </Position24>
       <Position25>
         <Filename Value="unrarwizardcode.pas"/>
-        <Caret Line="140" Column="13" TopLine="128"/>
+        <Caret Line="90" Column="13" TopLine="83"/>
       </Position25>
       <Position26>
         <Filename Value="unrarwizardcode.pas"/>
-        <Caret Line="103" Column="13" TopLine="96"/>
+        <Caret Line="85" Column="2" TopLine="70"/>
       </Position26>
       <Position27>
         <Filename Value="unrarwizardcode.pas"/>
-        <Caret Line="164" Column="86" TopLine="152"/>
+        <Caret Line="91" Column="11" TopLine="81"/>
       </Position27>
       <Position28>
         <Filename Value="unrarwizardcode.pas"/>
-        <Caret Line="91" Column="13" TopLine="84"/>
+        <Caret Line="6" Column="2"/>
       </Position28>
       <Position29>
         <Filename Value="unrarwizardcode.pas"/>
-        <Caret Line="148" Column="62" TopLine="136"/>
+        <Caret Line="37" Column="23" TopLine="27"/>
       </Position29>
       <Position30>
         <Filename Value="unrarwizardcode.pas"/>
-        <Caret Line="90" Column="13" TopLine="83"/>
+        <Caret Line="134" Column="2" TopLine="76"/>
       </Position30>
     </JumpHistory>
   </ProjectOptions>
@@ -230,6 +231,7 @@
     <Linking>
       <Debugging>
         <GenerateDebugInfo Value="False"/>
+        <RunWithoutDebug Value="True"/>
         <UseLineInfoUnit Value="False"/>
       </Debugging>
       <LinkSmart Value="True"/>
