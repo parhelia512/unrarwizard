@@ -66,14 +66,15 @@ begin
  correct_path:=target;
 end;
 
-procedure execute_program(const executable:string;const argument:string);
+function execute_program(const executable:string;const argument:string):Integer;
+var code:Integer;
 begin
  try
-  ExecuteProcess(executable,argument,[]);
+  code:=ExecuteProcess(executable,argument,[]);
  except
-  ShowMessage('Cant run an external program');
+  code:=-1;
  end;
-
+ execute_program:=code;
 end;
 
 procedure extract_data(const archive:string;const directory:string;const overwrite:boolean);
@@ -82,13 +83,17 @@ begin
  target:=ExtractFilePath(Application.ExeName)+'unrar.exe';
  work:='x ';
  if overwrite=true then work:='x -o+ ';
- execute_program(target,work+convert_file_name(archive)+' '+convert_file_name(directory));
+ if execute_program(target,work+convert_file_name(archive)+' '+convert_file_name(directory))<>0 then
+ begin
+  ShowMessage('Cannot extract the archive');
+ end;
+
 end;
 
 procedure TMainWindow.window_setup();
 begin
  Application.Title:='Unrar wizard';
- Self.Caption:='Unrar wizard 1.3';
+ Self.Caption:='Unrar wizard 1.3.1';
  Self.BorderStyle:=bsDialog;
  Self.Font.Name:=Screen.MenuFont.Name;
  Self.Font.Size:=14;

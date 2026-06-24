@@ -1,18 +1,18 @@
                                 Unrar wizard
 
-                               Version 1.3
+                               Version 1.3.1
 
                          This software was made by Popov Evgeniy Alekseyevich
 
 System requirements.
 
-Windows 2000 or higher for 32-bit systems
-Windows Vista or higher for 64-bit systems
+Windows 2000 or higher for 32-bit systems.
+Windows Vista or higher for 64-bit systems.
 
 The program description.
 
 This program is a graphic shell for Unrar.
-You can download Unrar here: http://www.rarlab.com/rar_add.htm
+You can download it here: http://www.rarlab.com/rar_add.htm
 Put it in the Unrar wizard directory before the first start.
 
 License.
@@ -56,4 +56,4 @@ Version history.
 1.2.8: The small changes.
 1.2.8.1: The documentation has been updated.
 1.2.9: The source code was recompiled under Lazarus 4.2.
-1.3: The small changes.
+1.3-1.3.1: The small changes.
