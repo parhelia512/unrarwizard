@@ -93,7 +93,7 @@ end;
 procedure TMainWindow.window_setup();
 begin
  Application.Title:='Unrar wizard';
- Self.Caption:='Unrar wizard 1.3.1';
+ Self.Caption:='Unrar wizard 1.3.2';
  Self.BorderStyle:=bsDialog;
  Self.Font.Name:=Screen.MenuFont.Name;
  Self.Font.Size:=14;
@@ -114,6 +114,7 @@ begin
  Self.BrowseButton.ShowHint:=False;
  Self.BrowseButton.ShowHint:=False;
  Self.ExtractButton.Enabled:=False;
+ Self.BrowseButton.Enabled:=False;
  Self.OverwriteCheckBox.Checked:=True;
  Self.ArchiveField.LabelPosition:=lpLeft;
  Self.DirectoryField.LabelPosition:=lpLeft;
@@ -152,6 +153,7 @@ end;
 procedure TMainWindow.ArchiveFieldChange(Sender: TObject);
 begin
  Self.ExtractButton.Enabled:=Self.ArchiveField.Text<>'';
+ Self.BrowseButton.Enabled:=Self.ExtractButton.Enabled;
 end;
 
 procedure TMainWindow.OpenButtonClick(Sender: TObject);
