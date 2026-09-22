@@ -1,6 +1,6 @@
                                 Unrar wizard
 
-                               Version 1.3.2
+                               Version 1.3.3
 
                          This software was made by Popov Evgeniy Alekseyevich
 
@@ -58,3 +58,4 @@ Version history.
 1.2.9: The source code was recompiled under Lazarus 4.2.
 1.3-1.3.1: The small changes.
 1.3.2: The user interface has improved.
+1.3.3: The small changes.

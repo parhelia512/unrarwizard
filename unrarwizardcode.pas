@@ -52,7 +52,7 @@ begin
  begin
   target:='"'+source+'"';
  end;
- convert_file_name:=target;
+ Result:=target;
 end;
 
 function correct_path(const source:string ): string;
@@ -63,7 +63,7 @@ begin
  begin
   target:=source+DirectorySeparator;
  end;
- correct_path:=target;
+ Result:=target;
 end;
 
 function execute_program(const executable:string;const argument:string):Integer;
@@ -74,7 +74,7 @@ begin
  except
   code:=-1;
  end;
- execute_program:=code;
+ Result:=code;
 end;
 
 procedure extract_data(const archive:string;const directory:string;const overwrite:boolean);
@@ -93,7 +93,7 @@ end;
 procedure TMainWindow.window_setup();
 begin
  Application.Title:='Unrar wizard';
- Self.Caption:='Unrar wizard 1.3.2';
+ Self.Caption:='Unrar wizard 1.3.3';
  Self.BorderStyle:=bsDialog;
  Self.Font.Name:=Screen.MenuFont.Name;
  Self.Font.Size:=14;
